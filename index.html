@@ -3,14 +3,7 @@
 <head>
     <title>ACM Login Page</title>
     <!--Microsoft jQuery Content Delivery Network (CDN)-->
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
-    <script src="js/metro.js"></script>
-    <!--Joyride CSS file
-    <link rel=" stylesheet" type="text/css" href="joyride-2.1.css">-->
-    <!--Joyride plugin
-    <script src="jquery.joyride-2.1.js"></script>-->
-
-    <link href="css/metro.css" rel="stylesheet">
+    <script src="js/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="css/custom_bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="css/bootstrap.min.css" />
@@ -175,25 +168,44 @@
         </div>
             
             <label>Insert your picture here</label>
-            
+            <div class="container">
+    <div class="row">    
+        <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  
+            <!-- image-preview-filename input [CUT FROM HERE]-->
+            <div class="input-group image-preview">
+                <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                <span class="input-group-btn">
+                    <!-- image-preview-clear button -->
+                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                        <span class="glyphicon glyphicon-remove"></span> Clear
+                    </button>
+                    <!-- image-preview-input -->
+                    <div class="btn btn-default image-preview-input">
+                        <span class="glyphicon glyphicon-folder-open"></span>
+                        <span class="image-preview-input-title">Browse</span>
+                        <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                    </div>
+                </span>
+            </div><!-- /input-group image-preview [TO HERE]--> 
+        </div>
+    </div>
+</div>
          <br />
          <br />
          
          <label>Choose your domain of expertise</label>
            <br />
-            <div class="funkyradio">
-         <div class="funkyradio-default col-sm-3">
+         <div class="col-sm-3">
             <input type="radio" name="radio" id="radio1" />
             <label for="radio1">Management</label>
         </div>
-        <div class="funkyradio-default col-sm-3">
+        <div class="col-sm-3">
             <input type="radio" name="radio" id="radio1" />
             <label for="radio1" class="">Technical</label>
         </div>
-        <div class="funkyradio-default col-sm-3">
+        <div class="col-sm-3">
             <input type="radio" name="radio" id="radio1" />
             <label for="radio1">Design</label>
-        </div>
         </div>
         <footer>
             
@@ -211,10 +223,7 @@
 
 
     <script src="js/colorChange.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-2.1.4.min.js"></script>
-
+    
     <!--disable hover for touch screen devices-->
     <script type="text/javascript">
     	function removeHoverCSSRule() {
@@ -239,55 +248,9 @@
     	  }
     	}
     </script>
-
-    <!--Tour tips
-    <ol id="joyRideTipContent">
-      <li data-text="Start">
-        <h1>Welcome to FFCS On The Go!</h1>
-        <h3 style="padding-bottom:15px;padding-top:5px;">Take a tour.</h3>
-      </li>
-      <li data-id="A1-id" data-button="Next">
-        <h4>Easy slot selection</h4>
-        <p>Click the slot to select.</p>
-      </li>
-      <li data-id="A1-tile-id" data-button="Next">
-        <h4>Quick selection</h4>
-        <p>Click the slot tile to select all at once.</p>
-      </li>
-      <li data-id="resetButton" data-button="Next" data-options="tipLocation:left">
-        <h4>Easy reset</h4>
-        <p>Click reset button to clear all selections</p>
-      </li>
-      <li data-id="ExcelSheet" data-button="Next" data-options="tipLocation:top">
-        <h4>Excel sheet is here!</h4>
-        <p>Search and filter courses, slots and faculties.</p>
-      </li>
-      <li data-id="slot-sel-area" data-button="Next" data-options="tipLocation:right">
-        <h4 style="padding-bottom:15px;padding-top:5px;">Copy past slot from excel sheet to select.</h4>
-      </li>
-      <li data-id="workspace" data-button="Next" data-options="tipLocation:top">
-        <h4>Workspace</h4>
-        <p>Keep notes while making your timetable</p>
-      </li>
-      <li data-id="fb-comment-id" data-button="Next" data-options="tipLocation:top">
-        <h4>Interact with others</h4>
-        <p>Comment here, ask queries or give feedback.</p>
-      </li>
-      <li data-id="fb-like-share" data-button="Done">
-        <h3 style="padding-bottom:15px;padding-top:5px;">Like and Share</h3>
-      </li>
-    </ol>-->
-
-    <!--Launching joyride when to page is loaded
-    <script>
-    $(window).load(function() {
-      $("#joyRideTipContent").joyride({
-        autoStart : true,
-        modal : false,
-        expose : true
-      });
-    });
-    </script>-->
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 
 </body>
 </html>
