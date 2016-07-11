@@ -151,7 +151,17 @@
             <div class="form-group">
                     <label for="pass2" class="col-sm-3 control-label">New Password&nbsp;<span class="required">* :</span></label>
                     <div class="col-sm-9">
-                    <input type="password" class="form-control" placeholder="Enter new password">
+                    <input type="password" class="form-control" placeholder="Enter new password" id="new_pass">
+                    <div class="row">
+                    <div class="col-sm-6">
+                    <span id="8char" class="glyphicon glyphicon-remove" style="color:#FF0004;">8 Characters Long</span> <br>
+                    <span id="ucase" class="glyphicon glyphicon-remove" style="color:#FF0004;">One Uppercase Letter</span> 
+                    </div>
+                    <div class="col-sm-6">
+                    <span id="lcase" class="glyphicon glyphicon-remove" style="color:#FF0004;">One Lowercase Letter</span> <br>
+                    <span id="num" class="glyphicon glyphicon-remove" style="color:#FF0004;">One Number</span>
+                    </div>
+                    </div>                    
                     </div>
                 </div>
             <br />
@@ -160,15 +170,23 @@
                 <div class="form-group">
                     <label for="pass3" class="col-sm-3 control-label">Confirm new Password&nbsp;<span class="required">* :</span></label>
                     <div class="col-sm-9">
-                    <input type="password" class="form-control" placeholder="Confirm new password">
+                    <input type="password" class="form-control" placeholder="Confirm new password" id="confirm_pass">
+                    <div class="row">
+                    <div class="col-sm-12">
+                    <span id="pwmatch" class="glyphicon glyphicon-remove" style="color:#FF0004;">Passwords Match</span> 
+                    </div>
+                    </div>                    
                     </div>
                 </div>
-            <br />
-            <br />
         </div>
-            
-            <label>Insert your picture here</label>
+           
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <div class="container">
+            <label>Insert your picture here</label>
     <div class="row">    
         <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  
             <!-- image-preview-filename input [CUT FROM HERE]-->
